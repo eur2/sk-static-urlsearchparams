@@ -2,6 +2,7 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
   import { building } from "$app/environment";
+  import { onMount } from "svelte";
 
   let { data } = $props();
   const { posts } = data;
@@ -36,7 +37,11 @@
   }
 
   // let items = ["One", "Two", "Three"];
-  let value = $state(!building ? page.url.searchParams.get("q") || "" : "");
+  // let value = $state(!building ? page.url.searchParams.get("q") || "" : "");
+  let value = $state("");
+  onMount(() => {
+    value = page.url.searchParams.get("q") || "";
+  });
   let filteredItems = $derived(
     value
       ? posts.filter((item) =>
