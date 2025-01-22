@@ -1,0 +1,16 @@
+{
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "name": "Laure Giletti & Gregory Dapra",
+  "short_name": "giletti-dapra.com",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "256x256",
+      "purpose": "any"
+    }
+  ]
+}
